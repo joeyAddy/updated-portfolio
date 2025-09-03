@@ -7,24 +7,35 @@ const Footer = () => {
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
       {/* background grid */}
-      <div className="w-full absolute left-0 -bottom-72 min-h-96">
+      {/* <div className="w-full absolute left-0 -bottom-72 min-h-96">
         <img
           src="/footer-grid.svg"
           alt="grid"
           className="w-full h-full opacity-50 "
         />
+      </div> */}
+      <div
+        className="max-h-96 h-96 w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
+       absolute bottom-10 left-0 flex items-center justify-center "
+      >
+        {/* Radial gradient for the container to give a faded look */}
+        <div
+          // chnage the bg to bg-black-100, so it matches the bg color and will blend in
+          className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100
+         bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
+        />
       </div>
 
       <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
+        <h1 className="heading lg:max-w-[45vw] z-10">
+          Ready to take <span className="text-blue-400">your</span> digital
           presence to the next level?
         </h1>
-        <p className="text-white-200 md:mt-10 my-5 text-center">
+        <p className="text-white-200 md:mt-10 my-5 text-center z-10">
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals.
         </p>
-        <a href="mailto:contact@jsmastery.pro">
+        <a href="mailto:chatwithjohnjoseph@gmail.com">
           <MagicButton
             title="Let's get in touch"
             icon={<FaLocationArrow />}
@@ -33,8 +44,8 @@ const Footer = () => {
         </a>
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
-        <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2024 Adrian Hajdin
+        <p className="md:text-base text-sm md:font-normal font-light z-10">
+          Copyright © {new Date().getFullYear()} Joseph John
         </p>
 
         <div className="flex items-center md:gap-3 gap-6">

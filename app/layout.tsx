@@ -1,3 +1,4 @@
+import * as Sentry from "@sentry/nextjs";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -7,8 +8,11 @@ import { ThemeProvider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Adrian's Portfolio",
-  description: "Modern & Minimal JS Mastery Portfolio",
+  title: "Joseph's Portfolio",
+  description: "Transforming concepts into exceptional web experiences",
+  other: {
+    ...Sentry.getTraceData(),
+  },
 };
 
 export default function RootLayout({
